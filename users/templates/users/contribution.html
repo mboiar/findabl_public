@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load i18n %} 
+{% block content %}
+<section class="main-section">
+    <h2 class="left-adjusted">
+        {% if request.user.is_authenticated %}
+        {% translate 'Hi' %}, {{ user.username }}
+        <br>
+        {% endif %}
+        {% translate "Here is how you can contribute" %}
+    </h2>
+    <p>
+    </p>
+    <ul>
+        <li>{% blocktranslate %}
+            Share errors and suggestions on <a href="https://github.com/mboiar/findabl">our Github</a>.
+        </li>{% endblocktranslate %}
+        <li>
+            <p>{% translate 'Help to expand the project by reviewing visited places.' %}</p>
+            {% if request.user.is_authenticated %}
+            <h3>{% translate 'Your reviews' %}</h3>
+            <ul class="">
+            {% for review in request.user.review_set.all %}
+                <li class="row">
+                    <h4>{{ review.place.name }}</h4>
+                    <a href="{% url 'places:edit_review' review.pk %}" class="btn btn--small">{% translate 'Edit review' %}</a>
+                </li>
+            {% empty %}
+            <li><p>{% translate 'You do not have any reviews yet' %}.</p></li>
+            {% endfor %}
+            </ul>
+            <a href="{% url 'reg:logout' %}">{% translate 'Logout' %}</a>
+            <a href="{% url 'reg:password_change' %}" >{% translate 'Change password' %}</a>
+            <a href="{% url 'users:profile_delete' %}" class="danger-text">{% translate 'Delete account' %}</a>
+            {% else %}
+            <p>
+                <a class="" href="{% url 'reg:login' %}">{% translate 'Log in' %}</a>{% translate ' or ' %} <a class="" href="{% url 'users:register' %}">{% translate 'register' %}</a>{% translate ' to create or edit reviews.' %}
+            </p>
+            {% endif %}
+        </li>
+    </ul>
+</section>
+{% endblock %}

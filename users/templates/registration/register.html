@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% load i18n %}
+
+{% block content %}
+<section class="registration">
+    <h2>{% translate 'Registration' %}</h2>
+    <p>{% translate 'Already have an account' %}? <a href="{% url 'reg:login' %}">{% translate 'Log in' %}</a></p>
+    <form method="post">
+    {% csrf_token %}
+    {% include 'form-fields.html' %}
+    <input type="checkbox" required />{% translate 'I have read the <a href="#">Contribution Guidelines</a> and <a href="#">Privacy Policy</a> and accept them.' %}<br/>
+    <input type="submit" class="btn primary" value="{% translate 'Register' %}">
+    </form>
+</section>
+{% endblock %}

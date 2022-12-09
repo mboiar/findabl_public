@@ -1,0 +1,663 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-07 21:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: .\places\models.py:70
+msgid "Ethnic"
+msgstr ""
+
+#: .\places\models.py:71
+msgid "Bar"
+msgstr ""
+
+#: .\places\models.py:72
+msgid "Pizzeria"
+msgstr ""
+
+#: .\places\models.py:73
+msgid "Café"
+msgstr ""
+
+#: .\places\models.py:74
+msgid "Fast food"
+msgstr ""
+
+#: .\places\models.py:75
+msgid "Restaurant"
+msgstr ""
+
+#: .\places\models.py:76
+msgid "Family-friendly"
+msgstr ""
+
+#: .\places\models.py:77 .\places\models.py:124
+msgid "Other"
+msgstr ""
+
+#: .\places\models.py:100
+msgid "MOKOTÓW"
+msgstr ""
+
+#: .\places\models.py:101
+msgid "PRAGA-POŁUDNIE"
+msgstr ""
+
+#: .\places\models.py:102 .\places\models.py:112
+msgid "URSYNÓW"
+msgstr ""
+
+#: .\places\models.py:103
+msgid "WOLA"
+msgstr ""
+
+#: .\places\models.py:104
+msgid "BIELANY"
+msgstr ""
+
+#: .\places\models.py:105
+msgid "TARGÓWEK"
+msgstr ""
+
+#: .\places\models.py:106
+msgid "ŚRÓDMIEŚCIE"
+msgstr ""
+
+#: .\places\models.py:107
+msgid "BEMOWO"
+msgstr ""
+
+#: .\places\models.py:108
+msgid "BIAŁOŁĘKA"
+msgstr ""
+
+#: .\places\models.py:109
+msgid "OCHOTA"
+msgstr ""
+
+#: .\places\models.py:110
+msgid "WAWER"
+msgstr ""
+
+#: .\places\models.py:111
+msgid "PRAGA-PÓŁNOC"
+msgstr ""
+
+#: .\places\models.py:113
+msgid "ŻOLIBORZ"
+msgstr ""
+
+#: .\places\models.py:114
+msgid "WŁOCHY"
+msgstr ""
+
+#: .\places\models.py:115
+msgid "WILANÓW"
+msgstr ""
+
+#: .\places\models.py:116
+msgid "REMBERTÓW"
+msgstr ""
+
+#: .\places\models.py:117
+msgid "WESOŁA"
+msgstr ""
+
+#: .\places\models.py:120
+msgid "Name"
+msgstr ""
+
+#: .\places\models.py:121
+msgid "Location"
+msgstr ""
+
+#: .\places\models.py:122
+msgid "Address"
+msgstr ""
+
+#: .\places\models.py:123
+msgid "Url on Google Maps"
+msgstr ""
+
+#: .\places\models.py:124
+msgid "Type"
+msgstr ""
+
+#: .\places\models.py:147 .\places\models.py:157
+msgid "Sensory intensity"
+msgstr ""
+
+#: .\places\models.py:148 .\places\models.py:158
+msgid "Wheelchair accessibility"
+msgstr ""
+
+#: .\places\models.py:149
+msgid "Quiet"
+msgstr ""
+
+#: .\places\models.py:150
+msgid "Low-sight friendliness"
+msgstr ""
+
+#: .\places\models.py:153
+msgid "User"
+msgstr ""
+
+#: .\places\models.py:154
+msgid "Place"
+msgstr ""
+
+#: .\places\models.py:155
+msgid "Creation date"
+msgstr ""
+
+#: .\places\models.py:159
+msgid "Noise"
+msgstr ""
+
+#: .\places\models.py:160
+msgid "Low-sight friendly"
+msgstr ""
+
+#: .\places\models.py:172
+msgid "One review per place"
+msgstr ""
+
+#: .\places\templates\places\detail.html:13
+msgid "Back to search results"
+msgstr ""
+
+#: .\places\templates\places\detail.html:28
+#: .\places\templates\places\search_results.html:43
+msgid "See this place on Google Maps"
+msgstr ""
+
+#: .\places\templates\places\detail.html:41
+msgid "Review this place"
+msgstr ""
+
+#: .\places\templates\places\detail.html:43
+msgid "Edit your review"
+msgstr ""
+
+#: .\places\templates\places\detail.html:51
+msgid "Customer reviews"
+msgstr ""
+
+#: .\places\templates\places\detail.html:53
+msgid "No reviews yet."
+msgstr ""
+
+#: .\places\templates\places\detail.html:56
+#, python-format
+msgid ""
+"\n"
+"\t\t\t1 review\n"
+"\t\t\t"
+msgid_plural ""
+"\n"
+"\t\t\t%(counter)s reviews\n"
+"\t\t\t"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\places\templates\places\detail.html:65
+msgid "Learn more about these ratings"
+msgstr ""
+
+#: .\places\templates\places\detail.html:70
+msgid "Photos"
+msgstr ""
+
+#: .\places\templates\places\detail.html:79
+msgid "No photos here"
+msgstr ""
+
+#: .\places\templates\places\detail.html:84
+msgid "This place on map"
+msgstr ""
+
+#: .\places\templates\places\generic_search_form.html:18
+msgid "Select all"
+msgstr ""
+
+#: .\places\templates\places\generic_search_form.html:36
+msgid "first step"
+msgstr ""
+
+#: .\places\templates\places\generic_search_form.html:37
+msgid "Back"
+msgstr ""
+
+#: .\places\templates\places\generic_search_form.html:39
+msgid "Go back"
+msgstr ""
+
+#: .\places\templates\places\generic_search_form.html:42
+msgid "Next"
+msgstr ""
+
+#: .\places\templates\places\review_confirm_delete.html:6
+msgid "Are you sure you want to delete your review of "
+msgstr ""
+
+#: .\places\templates\places\review_confirm_delete.html:9
+#: .\places\templates\places\review_create_form.html:28
+#: .\users\templates\users\profile_confirm_delete.html:11
+msgid "Cancel"
+msgstr ""
+
+#: .\places\templates\places\review_confirm_delete.html:10
+#: .\users\templates\users\profile_confirm_delete.html:12
+msgid "Confirm"
+msgstr ""
+
+#: .\places\templates\places\review_create_form.html:6
+msgid "Review of "
+msgstr ""
+
+#: .\places\templates\places\review_create_form.html:8
+msgid "Read about creating reviews"
+msgstr ""
+
+#: .\places\templates\places\review_create_form.html:8
+msgid " here."
+msgstr ""
+
+#: .\places\templates\places\review_create_form.html:30
+msgid "Delete review"
+msgstr ""
+
+#: .\places\templates\places\review_create_form.html:32
+msgid "Save review"
+msgstr ""
+
+#: .\places\templates\places\search_form.html:5
+msgid "Search"
+msgstr ""
+
+#: .\places\templates\places\search_results.html:9
+msgid "Results for:"
+msgstr ""
+
+#: .\places\templates\places\search_results.html:27
+msgid "Change search options"
+msgstr ""
+
+#: .\places\templates\places\search_results.html:56
+msgid "No reviews"
+msgstr ""
+
+#: .\places\templates\places\search_results.html:58
+msgid "See details"
+msgstr ""
+
+#: .\places\templates\places\search_results.html:105
+msgid ""
+"Couldn't find places with these parameters. Try a different search or use "
+"our filter."
+msgstr ""
+
+#: .\places\templates\places\search_results.html:107
+msgid "or use our filter"
+msgstr ""
+
+#: .\places\templates\places\search_results.html:108 .\templates\home.html:14
+msgid "Browse"
+msgstr ""
+
+#: .\places\views.py:47
+msgid "Average"
+msgstr ""
+
+#: .\templates\404.html:7
+msgid "Page you were trying to access does not exist"
+msgstr ""
+
+#: .\templates\404.html:8
+msgid "Return to the Homepage"
+msgstr ""
+
+#: .\templates\404.html:9 .\templates\base.html:40 .\templates\base.html:111
+msgid "Home"
+msgstr ""
+
+#: .\templates\about.html:5
+msgid "Coming soon"
+msgstr ""
+
+#: .\templates\base.html:43 .\templates\base.html:114
+msgid "About"
+msgstr ""
+
+#: .\templates\base.html:46
+msgid "Contribute"
+msgstr ""
+
+#: .\templates\base.html:67
+msgid "Profile"
+msgstr ""
+
+#: .\templates\base.html:71 .\templates\base.html:123
+#: .\users\templates\registration\register.html:8
+#: .\users\templates\registration\registration_complete.html:8
+#: .\users\templates\users\contribution.html:41
+#: .\users\templates\users\logged_out.html:6
+msgid "Log in"
+msgstr ""
+
+#: .\templates\base.html:74 .\templates\base.html:120
+#: .\users\templates\registration\login.html:28
+#: .\users\templates\registration\register.html:13
+msgid "Register"
+msgstr ""
+
+#: .\templates\base.html:89
+msgid "Back to top"
+msgstr ""
+
+#: .\templates\base.html:99
+msgid "Contact"
+msgstr ""
+
+#: .\templates\base.html:117
+msgid "Help"
+msgstr ""
+
+#: .\templates\base.html:126
+msgid "Contribution"
+msgstr ""
+
+#: .\templates\base.html:135
+msgid "2022 Maksym Boiar"
+msgstr ""
+
+#: .\templates\home.html:13
+msgid "Choose where to dine next based on your preferences"
+msgstr ""
+
+#: .\templates\home.html:17
+msgid "Type in the name or address of a place to learn about it"
+msgstr ""
+
+#: .\templates\home.html:22
+msgid "A comfortable place for everyone"
+msgstr ""
+
+#: .\templates\home.html:24
+msgid ""
+"Get information about the suitability of eating places with the criteria "
+"chosen based on extensive research."
+msgstr ""
+
+#: .\templates\home.html:28
+msgid "Reliable opinions"
+msgstr ""
+
+#: .\templates\home.html:29
+msgid ""
+"Review process is moderated and contributors are carefully selected to avoid "
+"misleading or biased reviews."
+msgstr ""
+
+#: .\templates\home.html:29
+msgid "Learn more about how you can contribute."
+msgstr ""
+
+#: .\templates\home.html:32
+msgid "Accessible and efficient design"
+msgstr ""
+
+#: .\templates\home.html:33
+msgid ""
+"The website is intended to meet the WCAG2.0 accessibility criteria and be "
+"comfortably used by anyone. An approach focused on simplicity and efficiency "
+"allows to quickly get needed information without distraction or frustration."
+msgstr ""
+
+#: .\templates\home.html:33
+msgid "Learn about WCAG2.0."
+msgstr ""
+
+#: .\templates\home.html:36
+msgid "A solution to a widespread issue"
+msgstr ""
+
+#: .\templates\home.html:37
+#, python-format
+msgid ""
+"Neurodivergence affects more than ? 50%% of people. They are sensitive to ?"
+"stimuli to a various degree, which makes many of seemingly high-quality "
+"catering establishments unsuitable to them. Most web services providing "
+"recommendations do not mention what might be crucial for a pleasing "
+"experience. Here, we concentrate on carefully picked criteria to fill this "
+"substantial gap."
+msgstr ""
+
+#: .\templates\home.html:37
+msgid "Relevant research"
+msgstr ""
+
+#: .\templates\language_switch_form.html:4
+msgid "Choose another language"
+msgstr ""
+
+#: .\templates\language_switch_form.html:17
+msgid "Switch"
+msgstr ""
+
+#: .\users\templates\registration\email_verification.html:11
+#: .\users\templates\users\contribution.html:8
+#: .\users\templates\users\profile.html:7
+msgid "Hi"
+msgstr ""
+
+#: .\users\templates\registration\email_verification.html:13
+msgid "Please click on the link below to confirm your registration:"
+msgstr ""
+
+#: .\users\templates\registration\login.html:6
+msgid "Your username and password didn"
+msgstr ""
+
+#: .\users\templates\registration\login.html:14
+msgid "Please login to see this page"
+msgstr ""
+
+#: .\users\templates\registration\login.html:23
+msgid "login"
+msgstr ""
+
+#: .\users\templates\registration\login.html:27
+msgid "Reset password"
+msgstr ""
+
+#: .\users\templates\registration\login.html:28
+msgid "Do not have an account"
+msgstr ""
+
+#: .\users\templates\registration\logout.html:5
+msgid "logout"
+msgstr ""
+
+#: .\users\templates\registration\register.html:7
+msgid "Registration"
+msgstr ""
+
+#: .\users\templates\registration\register.html:8
+msgid "Already have an account"
+msgstr ""
+
+#: .\users\templates\registration\register.html:12
+msgid ""
+"I have read the <a href=\"#\">Contribution Guidelines</a> and <a href=\"#"
+"\">Privacy Policy</a> and accept them."
+msgstr ""
+
+#: .\users\templates\registration\registration_complete.html:7
+msgid "Thanks! Registration is now complete"
+msgstr ""
+
+#: .\users\templates\registration\registration_complete.html:8
+#: .\users\templates\registration\registration_done.html:7
+#: .\users\templates\users\logged_out.html:6
+#: .\users\templates\users\password_change_done.html:7
+#: .\users\templates\users\password_reset_complete.html:7
+#: .\users\templates\users\password_reset_done.html:7
+#: .\users\templates\users\profile_delete_done.html:8
+msgid "Go Home"
+msgstr ""
+
+#: .\users\templates\registration\registration_done.html:6
+msgid ""
+"Registration request accepted. Follow the instructions sent to your email to "
+"complete registration and activate your account."
+msgstr ""
+
+#: .\users\templates\users\already_logged_in.html:5
+#: .\users\templates\users\logged_out.html:5
+msgid "You"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:11
+msgid "Here is how you can contribute"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:16
+msgid ""
+"\n"
+"            Share errors and suggestions on <a href=\"https://github.com/"
+"mboiar/findabl\">our Github</a>.\n"
+"        </li>"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:20
+msgid "Help to expand the project by reviewing visited places."
+msgstr ""
+
+#: .\users\templates\users\contribution.html:22
+msgid "Your reviews"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:27
+msgid "Edit review"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:33
+msgid "You do not have any reviews yet"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:36
+msgid "Logout"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:37
+#: .\users\templates\users\password_change_form.html:6
+#: .\users\templates\users\profile.html:12
+msgid "Change password"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:38
+#: .\users\templates\users\profile.html:14
+msgid "Delete account"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:41
+#: .\users\templates\users\logged_out.html:6
+msgid " or "
+msgstr ""
+
+#: .\users\templates\users\contribution.html:41
+msgid "register"
+msgstr ""
+
+#: .\users\templates\users\contribution.html:41
+msgid " to create or edit reviews."
+msgstr ""
+
+#: .\users\templates\users\password_change_done.html:6
+msgid "Password changed successfully"
+msgstr ""
+
+#: .\users\templates\users\password_change_form.html:19
+#: .\users\templates\users\profile_update.html:6
+msgid "Save changes"
+msgstr ""
+
+#: .\users\templates\users\password_reset_complete.html:6
+msgid "The password has been successfully reset"
+msgstr ""
+
+#: .\users\templates\users\password_reset_confirm.html:11
+msgid "Confirm new password"
+msgstr ""
+
+#: .\users\templates\users\password_reset_done.html:6
+msgid ""
+"Request for password reset accepted. Follow the instructions sent to your "
+"email to complete reset"
+msgstr ""
+
+#: .\users\templates\users\password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: .\users\templates\users\password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: .\users\templates\users\password_reset_email.html:8
+msgid "Your username, in case you’ve forgotten:"
+msgstr ""
+
+#: .\users\templates\users\password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: .\users\templates\users\password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: .\users\templates\users\password_reset_form.html:10
+msgid "Reset"
+msgstr ""
+
+#: .\users\templates\users\profile.html:11
+msgid "Edit profile"
+msgstr ""
+
+#: .\users\templates\users\profile.html:25
+msgid "Reviewed places will appear here"
+msgstr ""
+
+#: .\users\templates\users\profile_confirm_delete.html:8
+msgid "Are you sure you want to delete your account?"
+msgstr ""
+
+#: .\users\templates\users\profile_delete_done.html:7
+msgid "Your profile has been successfully deleted"
+msgstr ""

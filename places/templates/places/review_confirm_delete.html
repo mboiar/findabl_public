@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<form method="post">{% csrf_token %}
+    <p>
+        {% translate 'Are you sure you want to delete your review of ' %}<a href="{% url 'places:place' view.kwargs.pk %}">{{ object.place.name }}</a>?
+    </p>
+    <p class="row row-buttons">
+        <a href="{% url 'places:place' view.kwargs.pk %}">{% translate 'Cancel' %}</a>
+        <input type="submit" class="btn" value="{% translate 'Confirm' %}">
+    </p>
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<section class="main-section">
+	<h2><strong>{% translate 'Review of ' %}<a href="{% url 'places:place' view.kwargs.pk %}">{{ review.place.name }}</a></strong></h2>
+	<p>
+		{% translate 'Read about creating reviews' %} <a href="{% url 'places:about' %}#reviews">{% translate ' here.' %}</a>
+	</p>
+	<form method="post" class="col form-block">
+		{% csrf_token %}
+		
+		{% for field in form %}
+		<!-- <div class=""> -->
+			{{ field.label_tag }}<br>
+			{{ field }}
+			{% if field.help_text %}
+			  <p class="help">{{ field.help_text|safe }}</p>
+			{% endif %}
+			{% for error in field.errors %}
+			  <p class="danger-text">{{ error }}</p>
+			{% endfor %}
+		<!-- </div> -->
+		{% endfor %}
+		
+	
+		<div class="row row-buttons">
+			<a class="" href="{% url 'places:place' view.kwargs.pk %}" >{% translate 'Cancel' %}</a>
+			{% if object %}
+			<a class="danger-text" href="{% url 'places:delete_review' object.place.pk %}">{% translate 'Delete review' %}</a>
+			{% endif %}
+			<input type="submit" value="{% translate 'Save review' %}" class="btn">
+		</div>
+	</form>
+{% endblock %}

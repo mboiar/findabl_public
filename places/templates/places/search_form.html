@@ -1,0 +1,7 @@
+{% load i18n %}
+
+<form method="get" class="row form-inline" action="{% url 'places:search_results' %}" name="search-form">
+    <input type="search" name="q" class="input">
+        <button type="submit" class="btn btn-search secondary">{% translate "Search" %}</button>
+    </div>
+</form>

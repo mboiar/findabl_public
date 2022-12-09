@@ -1,0 +1,19 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Confirm Your Email</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <script src="script.js"></script> -->
+  </head>
+  <body>
+<h2>{% translate 'Hi' %} {{ user.username }},</h2>
+<div>
+  {% translate 'Please click on the link below to confirm your registration:' %}
+  <a href=
+    "https://{{ domain }}{% url 'users:activate' uid token %}">
+    https://{{ domain }}{% url 'users:activate' uid token %}</a>
+</div>
+</body>
+</html>

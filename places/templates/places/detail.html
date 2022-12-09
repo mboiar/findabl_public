@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block title %}{{ place.name }} - Findabl{% endblock %}
+
+{% block content %}
+<section class="col main-section">
+	{% if '/search/' in request.META.HTTP_REFERER %}
+	<div class="row left-adjusted">
+		<span class="material-symbols-outlined">arrow_back</span>
+		<a href="{{ request.META.HTTP_REFERER }}">
+		{% translate "Back to search results" %}</a>
+	</div>
+	{% endif %}
+	<h2>
+		<strong>{{ place.name }}</strong>
+	</h2>
+	<div class="col details">
+		<div class="row">
+		<div class="col labels">
+			<div class=""><span class="material-symbols-outlined">label</span>{{ place.get_type_display }}</div>
+				<div><span class="material-symbols-outlined">location_on</span>
+				{{ place.get_location_display|title }}
+				</div>
+				<div class="">
+					<span class="material-symbols-outlined">output</span>
+					<a href="{{ place.url }}" class="">{% translate "See this place on Google Maps" %}</a>
+				</div>
+		</div>
+		<div class="col">
+			{% if not review_count %}
+			<p class="faded">No reviews yet.</p>
+			{% else %}
+				{% with score=scores|last %}
+				{% include 'places/score_circle.html' %} 
+				{% endwith %}
+			{% endif %}
+			{% if user.is_authenticated %}
+			{% if not review %}
+			<a href="{% url 'places:rate' place.pk %}" class="btn primary">{% translate 'Review this place' %}</a>
+			{% else %}
+			<a href="{% url 'places:edit_review' place.pk %}" class="btn primary">{% translate 'Edit your review' %}</a>
+			{% endif %}
+			{% endif %}
+		</div>
+		</div>
+	</div>
+	{% block ratings %}
+	<section class="labels">
+		<h3><strong>{% translate "Customer reviews" %}</strong></h3>
+		{% if not review_count %}
+		<p class="faded">{% translate 'No reviews yet.' %}</p>
+		{% else %}
+		<p>
+			{% blocktranslate with c=1 count counter=review_count %}
+			1 review
+			{% plural %}
+			{{ counter }} reviews
+			{% endblocktranslate %} 
+		</p>
+		{% with score_set=scores %}
+		{% include 'places/scores.html' %}
+		{% endwith %}
+		<p><a href="{% url 'places:about' %}#features">{% translate 'Learn more about these ratings' %}.</a></p>
+		{% endif %}
+	</section>
+	{% endblock %}
+	<section class="">
+		<h3><strong>{% translate "Photos" %}</strong></h3>	
+		<ul class="gallery">
+			{% for photo in place.photos %}
+			<li>
+				<figure class="">
+					<img src="{{ photo.url }}" alt="{{ photo.alt }}">
+				</figure>
+			</li>
+			{% empty %}
+			<p class="faded">{% translate 'No photos here' %}.</p>
+			{% endfor %}
+		</ul>
+	</section>
+	<section class="col map">
+		<h3>{% translate 'This place on map' %}</h3>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.8061281194214!2d21.016505000000002!3d52.228739999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccf17a777be9%3A0xe2cc085bd5661c5c!2sTrattoria%20Da%20Antonio!5e0!3m2!1sen!2spl!4v1663448976503!5m2!1sen!2spl"
+			allowfullscreen="" 
+			loading="lazy" 
+			referrerpolicy="no-referrer-when-downgrade">
+		</iframe>
+	</section>
+</section>
+{% endblock %}

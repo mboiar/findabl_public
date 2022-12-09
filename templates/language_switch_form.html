@@ -1,0 +1,18 @@
+{% load i18n %}
+
+
+<form class="form-inline" action="{% url 'set_language' %}" method="post" label="{% translate 'Choose another language' %}">
+    {% csrf_token %}
+    <select name="language" class="language-switch">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        
+        {% for language in languages %}
+        <option class="lang-switch-option" value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>  
+            {{ language.name_local }}
+        </option>
+        {% endfor %}
+    </select>
+    <input class="btn secondary btn--small" type="submit" value="{% translate 'Switch' %}">
+</form>

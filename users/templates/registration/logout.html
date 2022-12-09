@@ -1,0 +1,7 @@
+{% load i18n %}
+
+<form method="post" action="{% url 'reg:logout' %}">
+{% csrf_token %}
+<input class='btn primary' type="submit" value="{% translate 'logout' %}">
+<input type="hidden" name="next" value="{{ next }}">
+</form>

@@ -1,0 +1,18 @@
+{% load i18n %}
+
+<div class="row ratings">
+    {% for score in score_set %}
+    {% if not score.name == "score_avg" %}
+    <div class="col">
+        <h4 class="">{{ score.verbose_name }}</h4>
+        <p class="rating-num">
+            <svg class="rating-circle-sm" stroke-dashoffset="{{ score.circle_scale }}">
+                <!-- <circle class="background-circle" stroke="grey"/> -->
+                <circle stroke="rgba({{ score.score_color }}, 228, 0, 0.59)"/>
+                <text text-anchor="middle" dominant-baseline="central">{{ score.value|floatformat:1 }}</text>
+            </svg> 
+        </p>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<section class="main-section">
+    <object type="image/svg+xml" data="e404.svg"></object>
+    <h2>{% translate "Page you were trying to access does not exist" %}</h2>
+    <p>{% translate "Return to the Homepage" %}</p>
+    <a href="{% url 'places:home' %}" class="btn">{% translate "Home" %}</a>
+</section>
+{% endblock %}

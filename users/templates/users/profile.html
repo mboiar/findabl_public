@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+{% load i18n %}
+
+{% block content %}
+<section class="profile-info">
+<h2>{% translate 'Hi' %}, {{ user.username }}</h2>
+<div>
+<img src="#" caption="Profile Photo">
+</div>
+<a href="#" >{% translate 'Edit profile' %}</a>
+<a href="{% url 'reg:password_change' %}" >{% translate 'Change password' %}</a>
+{% include 'registration/logout.html' %}
+<a href="#" >{% translate 'Delete account' %}</a>
+</section>
+<section class="user-reviewed-places">
+    <ul>
+    {% for review in reviews %}
+        <li>
+            <div class="place">
+
+            </div>
+        </li>
+    {% empty %} 
+    <p>{% translate 'Reviewed places will appear here' %}</p>
+    {% endfor %}
+</ul>
+</section>
+{% endblock %}

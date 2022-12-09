@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+
+{% load i18n %}
+
+{% block content %}
+<section id="success">
+<p>{% translate 'Thanks! Registration is now complete' %}.</p>
+<p><a href="{% url 'places:home' %}">{% translate 'Go Home' %}</a> or <a href="{% url 'login' %}">{% translate 'Log in' %}</a>.</p>
+</section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <p>
+        {% translate 'Are you sure you want to delete your account?' %}
+    </p>
+    <p class="row row-buttons">
+        <a href="{% url 'users:contribution' %}">{% translate 'Cancel' %}</a>
+        <input type="submit" class="btn" value="{% translate 'Confirm' %}">
+    </p>
+</form>
+
+{% endblock %}

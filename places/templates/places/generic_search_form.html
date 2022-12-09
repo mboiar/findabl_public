@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+<form class="col form-block" action="/filter/" method="get">
+  <p>Step {{ steps.step }} of {{ steps.count }}</p>
+  {% if not steps.step == steps.count %}
+  <!-- something -->
+  {% endif %}
+    <input type="hidden" name="step" value="{{ step }}">
+    {% for field in form %}
+      <div class="fieldWrapper">
+        {{ field.errors }}
+        <h3>{{ field.label_tag }} </h3>
+        {% if field.widget_type == 'checkbox' %}
+          <input name="select-all" type="checkbox" onclick="toggleCheckboxes(this, event);" />{% translate 'Select all' %}<br/>
+        {% endif %}
+      {{ field }}
+      {% if field.help_text %}
+      <p class="help">{{ field.help_text|safe }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+{% for key, vals in queries %}
+  {% for val in vals %}
+    {% if not key == 'step' %}
+      <!-- <input type="hidden" name="{{ key }}" value="{{ val }}"> -->
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+  {% if steps.prev %}
+  <!-- <button name="goto_step" type="submit" value="{{ steps.first }}">{% trans "first step" %}</button> -->
+  <button class="btn secondary" name="goto_step" type="submit" value="{{ steps.prev }}">{% translate "Back" %}</button>
+  {% endif %}
+    <!-- <input type="button" class="btn btn-inv" value="{% translate 'Go back' %}"> -->
+  {% if steps.next %}
+  {% endif %}
+  <input type="submit" class="btn primary" value="{% translate 'Next' %}">
+</form>
+
+<noscript>
+  <style>
+    .select-all {display:none;}
+    </style>
+</noscript>
+<script src="{% static 'places/js/toggleSelectAllBtn.js' %}">
+</script>
+
+{% endblock %}
